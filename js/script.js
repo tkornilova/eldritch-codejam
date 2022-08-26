@@ -152,7 +152,7 @@ const makeCardsArr = (cardData, cardArr, color) => {
       }
     }
 
-    cardArr.sort(() => Math.random() - 0.5);
+    cardArr = cardArr.sort(() => Math.random() - 0.5);
   }
 
   //Normal level
@@ -175,7 +175,7 @@ const makeCardsArr = (cardData, cardArr, color) => {
       }
     }
 
-    cardArr.sort(() => Math.random() - 0.5);
+    cardArr = cardArr.sort(() => Math.random() - 0.5);
   }
 
   //Hard level
@@ -192,7 +192,7 @@ const makeCardsArr = (cardData, cardArr, color) => {
       }
     }
 
-    cardArr.sort(() => Math.random() - 0.5);
+    cardArr = cardArr.sort(() => Math.random() - 0.5);
   }
 
   //Very hard level
@@ -213,13 +213,13 @@ const makeCardsArr = (cardData, cardArr, color) => {
   //Remove not needed elements
   if (color === 'green') {
     greenCardsArr = cardArr.slice(0, ancientsData[parameters.ancientId].sum.greenCards);
-    greenCardsArr.sort(() => Math.random() - 0.5);
+    greenCardsArr = greenCardsArr.sort(() => Math.random() - 0.5);
   } else if (color === 'brown') {
     brownCardsArr = cardArr.slice(0, ancientsData[parameters.ancientId].sum.brownCards);
-    brownCardsArr.sort(() => Math.random() - 0.5);
+    brownCardsArr = brownCardsArr.sort(() => Math.random() - 0.5);
   } else if (color === 'blue') {
     blueCardsArr = cardArr.slice(0, ancientsData[parameters.ancientId].sum.blueCards);
-    blueCardsArr.sort(() => Math.random() - 0.5);
+    blueCardsArr = blueCardsArr.sort(() => Math.random() - 0.5);
   }
 }
 
