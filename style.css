@@ -13,6 +13,9 @@
   --basic-black-50: rgba(0, 0, 0, 0.5);
   --shadow-dark: rgba(0, 1, 1, 0.25);
   --shadow-bright: rgba(255, 255, 255, 0.35);
+  --green: rgba(73, 182, 117, 1);
+  --brown: rgba(170, 106, 44, 1);
+  --blue: rgba(139, 185, 221, 1);
 }
 
 body {
@@ -199,18 +202,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--basic-white);
 }
 
 .stage__cards .green {
-  background-color: green;
+  background-color: var(--green);
 }
 
 .stage__cards .brown {
-  background-color: burlywood;
+  background-color: var(--brown);
 }
 
 .stage__cards .blue {
-  background-color: lightskyblue;
+  background-color: var(--blue);
 }
 
 .cards {

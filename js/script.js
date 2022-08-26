@@ -19,6 +19,8 @@ let parameters = {
   difficulty: 'very-easy',
 }
 
+alert('Карты замешиваются автоматически при смене уровня сложности или героя.');
+
 ancientsList.forEach((value, i) => {
   value.addEventListener('click', () => {
     //Remove active class from all elements
@@ -42,6 +44,9 @@ ancientsList.forEach((value, i) => {
 
     //Remove first card
     cardOpenedImg.src = 'assets/white-bg.jpeg';
+
+    //Add first card bg
+    cardClosedImg.src = 'assets/mythicCardBackground.png';
   })
 })
 
@@ -68,6 +73,9 @@ difficultyList.forEach((value, i) => {
 
     //Remove first card
     cardOpenedImg.src = 'assets/white-bg.jpeg';
+
+    //Add first card bg
+    cardClosedImg.src = 'assets/mythicCardBackground.png';
   })
 })
 
@@ -86,13 +94,13 @@ resetButton.addEventListener('click', () => {
   parameters.ancientId = '';
   parameters.difficulty = '';
 
-  //Remove first card
-  cardOpenedImg.src = 'assets/white-bg.jpeg';
-
   //Reset progress
   resetCardProgress();
 
   //Remove first card
+  cardOpenedImg.src = 'assets/white-bg.jpeg';
+
+  //Add first card bg
   cardClosedImg.src = 'assets/mythicCardBackground.png';
 })
 
