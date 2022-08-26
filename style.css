@@ -11,6 +11,8 @@
   --basic-white-50: rgba(255, 255, 255, 0.5);
   --basic-black: rgba(0, 0, 0, 1);
   --basic-black-50: rgba(0, 0, 0, 0.5);
+  --shadow-dark: rgba(0, 1, 1, 0.25);
+  --shadow-bright: rgba(255, 255, 255, 0.35);
 }
 
 body {
@@ -62,22 +64,23 @@ body {
 }
 
 .main-card__item img {
-  width: 170px;
+  width: 150px;
   height: auto;
-  margin: 0 10px;
+  margin: 0 20px;
   cursor: pointer;
   transition: 1s;
 }
 
 .main-card__item--active img {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: 1s;
+  box-shadow: 0px 7px 15px var(--shadow-bright);
 }
 
 .main-card img:hover,
 .main-card img:focus,
 .main-card img:active {
-  transform: scale(1.1);
+  transform: scale(1.2);
   transition: 1s;
 }
 
@@ -94,11 +97,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40px;
+  height: 35px;
   background-color: var(--basic-white-50);
   color: var(--basic-black-50);
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   margin: 0 0 10px 0;
   cursor: pointer;
   transition: 1s;
@@ -117,6 +120,7 @@ body {
   color: var(--basic-black);
   transform: scale(1.1);
   border: 2px solid var(--basic-black-50);
+  box-shadow: 0px 7px 15px var(--shadow-dark);
 }
 
 .reset {
@@ -128,13 +132,14 @@ body {
   padding: 10px;
   background-color: var(--basic-black-50);
   border: none;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: 1s;
   font-family: 'Roboto';
+  border-radius: 10px;
 }
 
 .reset:hover,
@@ -143,6 +148,7 @@ body {
   transform: scale(1.1);
   transition: 1s;
   border: none;
+  box-shadow: 0px 7px 15px var(--shadow-bright);
 }
 
 .game {

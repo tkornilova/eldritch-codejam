@@ -16,7 +16,7 @@ let blueCardsArr = [];
 
 let parameters = {
   ancientId: '0',
-  difficulty: 'easy',
+  difficulty: 'very-easy',
 }
 
 ancientsList.forEach((value, i) => {
@@ -28,9 +28,6 @@ ancientsList.forEach((value, i) => {
 
     //Add active class to current element
     value.classList.toggle('main-card__item--active');
-
-    //Reset button - nonactive
-    resetButton.style.border = 'none';
 
     //Change parameters
     parameters.ancientId = i;
@@ -57,9 +54,6 @@ difficultyList.forEach((value, i) => {
 
     //Add active class to current element
     value.classList.toggle('difficulty__item--active');
-
-    //Reset button - nonactive
-    resetButton.style.border = 'none';
 
     //Change parameters
     parameters.difficulty = difficulties[i].name;
@@ -88,9 +82,6 @@ resetButton.addEventListener('click', () => {
     v.classList.remove('difficulty__item--active');
   })
 
-  //Reset button - active
-  resetButton.style.border = '2px solid var(--basic-white)';
-
   //Reset parameters
   parameters.ancientId = '';
   parameters.difficulty = '';
@@ -100,6 +91,8 @@ resetButton.addEventListener('click', () => {
 
   //Reset progress
   resetCardProgress();
+
+  console.log(parameters)
 })
 
 const startCardProgress = (id) => {
@@ -241,6 +234,10 @@ cardClosed.addEventListener('click', () => {
   let countGreenThird = document.querySelector('.progress__stage3 .green').textContent;
   let countBrownThird = document.querySelector('.progress__stage3 .brown').textContent;
   let countBlueThird = document.querySelector('.progress__stage3 .blue').textContent;
+
+  if (parameters.ancientId === '' || parameters.difficulty === '') {
+    return;
+  }
 
   if (countGreenFirst > 0) {
     //Change card
