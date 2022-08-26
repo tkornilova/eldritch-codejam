@@ -5,81 +5,87 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
   <title>Game</title>
 </head>
 <body>
-  <div class="choise">
-    <div class="main-card">
-      <h2>Выбор древнего</h2>
-      <div class="main-card__list">
-        <div class="main-card__item">
-            <img src="assets/Ancients/Azathoth.png" alt="Azathoth">
-        </div>
-        <div class="main-card__item">
-            <img src="assets/Ancients/Cthulthu.png" alt="Cthulthu">
-        </div>
-        <div class="main-card__item">
-            <img src="assets/Ancients/IogSothoth.png" alt="IogSothoth">
-        </div>
-        <div class="main-card__item">
-            <img src="assets/Ancients/ShubNiggurath.png" alt="ShubNiggurath">
-        </div>
-      </div>
-
-    </div>
-    <div class="difficulty">
-      <h2>Уровень сложности</h2>
-      <div class="difficulty__list">
-        <div class="difficulty__item">Очень легкий</div>
-        <div class="difficulty__item">Легкий</div>
-        <div class="difficulty__item">Обычный</div>
-        <div class="difficulty__item">Сложный</div>
-        <div class="difficulty__item">Очень сложный</div>
-      </div>
-    </div>
-  </div>
-  <button class="reset">Сбросить все</button>
-  <div class="game">
-    <div class="game__progress progress">
-        <div class="progress__stage1 stage">
-          <p>Стадия 1:</p>
-          <div class="stage__cards">
-            <div class="green">0</div>
-            <div class="brown">0</div>
-            <div class="blue">0</div>
-          </div>
-        </div>  
-        <div class="progress__stage2 stage">
-            <p>Стадия 2:</p>
-            <div class="stage__cards">
-              <div class="green">0</div>
-              <div class="brown">0</div>
-              <div class="blue">0</div>
+  <div class="wrapper">
+    <div class="choise">
+        <div class="main-card">
+          <h2>Выбор древнего</h2>
+          <div class="main-card__list">
+            <div class="main-card__item">
+                <img src="assets/Ancients/Azathoth.png" alt="Azathoth">
+            </div>
+            <div class="main-card__item">
+                <img src="assets/Ancients/Cthulthu.png" alt="Cthulthu">
+            </div>
+            <div class="main-card__item">
+                <img src="assets/Ancients/IogSothoth.png" alt="IogSothoth">
+            </div>
+            <div class="main-card__item">
+                <img src="assets/Ancients/ShubNiggurath.png" alt="ShubNiggurath">
             </div>
           </div>
-          <div class="progress__stage3 stage">
-            <p>Стадия 3:</p>
-            <div class="stage__cards">
-              <div class="green">0</div>
-              <div class="brown">0</div>
-              <div class="blue">0</div>
-            </div>
+    
+        </div>
+        <div class="difficulty">
+          <h2>Уровень сложности</h2>
+          <div class="difficulty__list">
+            <div class="difficulty__item">Очень легкий</div>
+            <div class="difficulty__item">Легкий</div>
+            <div class="difficulty__item">Обычный</div>
+            <div class="difficulty__item">Сложный</div>
+            <div class="difficulty__item">Очень сложный</div>
           </div>
-
-    </div>
-    <div class="game__cards cards">
-      <div class="cars__closed">
-        <img src="assets/mythicCardBackground.png" alt="Обложка карты">
-      </div>
-      <div class="cars__opened">
-        <div>
-
         </div>
       </div>
-
-    </div>
+      <button class="reset">Сбросить все</button>
+      <div class="game">
+        <div class="game__progress progress">
+            <div class="progress__stage1 stage">
+              <p>Стадия 1:</p>
+              <div class="stage__cards">
+                <div class="green">0</div>
+                <div class="brown">0</div>
+                <div class="blue">0</div>
+              </div>
+            </div>  
+            <div class="progress__stage2 stage">
+                <p>Стадия 2:</p>
+                <div class="stage__cards">
+                  <div class="green">0</div>
+                  <div class="brown">0</div>
+                  <div class="blue">0</div>
+                </div>
+              </div>
+              <div class="progress__stage3 stage">
+                <p>Стадия 3:</p>
+                <div class="stage__cards">
+                  <div class="green">0</div>
+                  <div class="brown">0</div>
+                  <div class="blue">0</div>
+                </div>
+              </div>
+    
+        </div>
+        <div class="game__cards cards">
+          <div class="cards__closed">
+            <div>
+              <img src="assets/mythicCardBackground.png" alt="Обложка карты">
+            </div>
+          </div>
+          <div class="cards__opened">
+            <div>
+              <img src="assets/white-bg.jpeg" alt="Обложка карты">
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
 
   </div>
-<script src="script.js" type="module"></script>
+<script src="js/script.js" type="module"></script>
 </body>
 </html>
