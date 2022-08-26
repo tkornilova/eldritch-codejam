@@ -7,7 +7,7 @@ import greenCardsData from '../data/mythicCards/green/index.js';
 const ancientsList = document.querySelectorAll('.main-card__item');
 const difficultyList = document.querySelectorAll('.difficulty__item');
 const resetButton = document.querySelector('.reset');
-const cardClosed = document.querySelector('.cards__closed img');
+const cardClosedImg = document.querySelector('.cards__closed img');
 const cardOpenedImg = document.querySelector('.cards__opened img');
 
 let greenCardsArr = [];
@@ -92,7 +92,8 @@ resetButton.addEventListener('click', () => {
   //Reset progress
   resetCardProgress();
 
-  console.log(parameters)
+  //Remove first card
+  cardClosedImg.src = 'assets/mythicCardBackground.png';
 })
 
 const startCardProgress = (id) => {
@@ -222,7 +223,15 @@ const makeCardsArr = (cardData, cardArr, color) => {
   }
 }
 
-cardClosed.addEventListener('click', () => {
+//Update progress
+startCardProgress(parameters.ancientId);
+
+//Make a set of cards
+makeCardsArr(greenCardsData, greenCardsArr, 'green');
+makeCardsArr(brownCardsData, brownCardsArr, 'brown');
+makeCardsArr(blueCardsData, blueCardsArr, 'blue');
+
+cardClosedImg.addEventListener('click', () => {
   let countGreenFirst = document.querySelector('.progress__stage1 .green').textContent;
   let countBrownFirst = document.querySelector('.progress__stage1 .brown').textContent;
   let countBlueFirst = document.querySelector('.progress__stage1 .blue').textContent;
@@ -339,7 +348,7 @@ cardClosed.addEventListener('click', () => {
     document.querySelector('.progress__stage3 .blue').textContent = countBlueThird;
 
   } else if (greenCardsArr.length === 0 && brownCardsArr.length === 0 && blueCardsArr.length === 0) {
-    cardClosed.src = "assets/white-bg.jpeg";
+    cardClosedImg.src = "assets/white-bg.jpeg";
   }
 
 })
