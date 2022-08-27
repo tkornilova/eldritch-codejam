@@ -19,8 +19,6 @@ let parameters = {
   difficulty: 'very-easy',
 }
 
-alert('Карты замешиваются автоматически при смене уровня сложности или героя.');
-
 ancientsList.forEach((value, i) => {
   value.addEventListener('click', () => {
     //Remove active class from all elements
@@ -252,8 +250,10 @@ cardClosedImg.addEventListener('click', () => {
   let countBrownThird = document.querySelector('.progress__stage3 .brown').textContent;
   let countBlueThird = document.querySelector('.progress__stage3 .blue').textContent;
 
-  if (parameters.ancientId === '' || parameters.difficulty === '') {
-    return;
+  if (parameters.ancientId === '') {
+    alert('Выберите древнего.');
+  } else if (parameters.difficulty === '') {
+    alert('Выберите уровень сложности.');
   }
 
   if (countGreenFirst > 0) {
